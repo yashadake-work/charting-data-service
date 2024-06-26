@@ -1,0 +1,170 @@
+2024-06-26 10:01:02,478 - __main__ - INFO - Starting Flask application
+2024-06-26 10:01:02,539 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-06-26 10:01:02,543 - werkzeug - INFO -  * Running on http://192.168.240.3:8000/ (Press CTRL+C to quit)
+2024-06-26 10:01:02,546 - werkzeug - INFO -  * Restarting with stat
+2024-06-26 10:01:04,993 - __main__ - INFO - Starting Flask application
+2024-06-26 10:01:05,017 - werkzeug - WARNING -  * Debugger is active!
+2024-06-26 10:01:05,019 - werkzeug - INFO -  * Debugger PIN: 862-165-800
+-;;-;-;-;-;-;-;-;-;-;-;
+2024-06-26 10:02:26,813 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:02:26,815 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:02:26,817 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='1Y'
+2024-06-26 10:02:26,882 - services.charting_service - ERROR - Error fetching charting data for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:02:26,884 - controllers.default_controller - ERROR - Error processing request for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:02:26,885 - __main__ - ERROR - Error processing request at /charting-data/: (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:02:26,890 - werkzeug - INFO - 192.168.240.4 - - [26/Jun/2024 10:02:26] "[31m[1mPOST /charting-data/ HTTP/1.1[0m" 400 -
+2024-06-26 10:03:00,447 - __main__ - INFO - Starting Flask application
+2024-06-26 10:03:00,479 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-06-26 10:03:00,481 - werkzeug - INFO -  * Running on http://192.168.240.3:8000/ (Press CTRL+C to quit)
+2024-06-26 10:03:00,491 - werkzeug - INFO -  * Restarting with stat
+2024-06-26 10:03:02,476 - __main__ - INFO - Starting Flask application
+2024-06-26 10:03:02,493 - werkzeug - WARNING -  * Debugger is active!
+2024-06-26 10:03:02,499 - werkzeug - INFO -  * Debugger PIN: 862-165-800
+2024-06-26 10:03:32,395 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:03:32,397 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:03:32,402 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='1Y'
+2024-06-26 10:03:32,460 - services.charting_service - ERROR - Error fetching charting data for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:32,464 - controllers.default_controller - ERROR - Error processing request for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:32,465 - __main__ - ERROR - Error processing request at /charting-data/: (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:32,469 - werkzeug - INFO - 192.168.240.4 - - [26/Jun/2024 10:03:32] "[31m[1mPOST /charting-data/ HTTP/1.1[0m" 400 -
+2024-06-26 10:03:42,103 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:03:42,110 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:03:42,113 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='1Y'
+2024-06-26 10:03:42,117 - services.charting_service - ERROR - Error fetching charting data for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:42,120 - controllers.default_controller - ERROR - Error processing request for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:42,121 - __main__ - ERROR - Error processing request at /charting-data/: (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:42,123 - werkzeug - INFO - 192.168.240.4 - - [26/Jun/2024 10:03:42] "[31m[1mPOST /charting-data/ HTTP/1.1[0m" 400 -
+2024-06-26 10:03:45,835 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:03:45,836 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=8D
+2024-06-26 10:03:45,838 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='8D'
+2024-06-26 10:03:45,850 - services.charting_service - ERROR - Error fetching charting data for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:45,854 - controllers.default_controller - ERROR - Error processing request for account_no 'MUNDRAPORT': (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:45,857 - __main__ - ERROR - Error processing request at /charting-data/: (psycopg2.errors.UndefinedTable) relation "charting_data" does not exist
+LINE 2: FROM charting_data 
+             ^
+
+[SQL: SELECT max(charting_data.timestamp) AS max_1 
+FROM charting_data 
+WHERE charting_data.account_no = %(account_no_1)s]
+[parameters: {'account_no_1': 'MUNDRAPORT'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-26 10:03:45,859 - werkzeug - INFO - 192.168.240.1 - - [26/Jun/2024 10:03:45] "[31m[1mPOST /charting-data/ HTTP/1.1[0m" 400 -
+2024-06-26 10:05:10,130 - __main__ - INFO - Starting Flask application
+2024-06-26 10:05:10,177 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-06-26 10:05:10,182 - werkzeug - INFO -  * Running on http://172.18.0.3:8000/ (Press CTRL+C to quit)
+2024-06-26 10:05:10,194 - werkzeug - INFO -  * Restarting with stat
+2024-06-26 10:05:12,663 - __main__ - INFO - Starting Flask application
+2024-06-26 10:05:12,687 - werkzeug - WARNING -  * Debugger is active!
+2024-06-26 10:05:12,697 - werkzeug - INFO -  * Debugger PIN: 121-185-602
+2024-06-26 10:05:24,837 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:05:24,838 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:05:24,840 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='1Y'
+2024-06-26 10:05:24,938 - services.charting_service - INFO - Fetched 100 records for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:05:24,947 - controllers.default_controller - INFO - Returned 100 records in response for account_no 'MUNDRAPORT'
+2024-06-26 10:05:24,949 - __main__ - INFO - Successfully processed request at /charting-data/
+2024-06-26 10:05:24,957 - werkzeug - INFO - 172.18.0.4 - - [26/Jun/2024 10:05:24] "POST /charting-data/ HTTP/1.1" 200 -
+2024-06-26 10:05:29,444 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:05:29,445 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=8D
+2024-06-26 10:05:29,447 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='8D'
+2024-06-26 10:05:29,464 - services.charting_service - INFO - Fetched 6 records for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=8D
+2024-06-26 10:05:29,466 - controllers.default_controller - INFO - Returned 6 records in response for account_no 'MUNDRAPORT'
+2024-06-26 10:05:29,471 - __main__ - INFO - Successfully processed request at /charting-data/
+2024-06-26 10:05:29,475 - werkzeug - INFO - 172.18.0.1 - - [26/Jun/2024 10:05:29] "POST /charting-data/ HTTP/1.1" 200 -
+2024-06-26 10:06:10,238 - __main__ - INFO - Received request at /charting-data/
+2024-06-26 10:06:10,239 - controllers.default_controller - INFO - Received request to fetch charting data for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:06:10,241 - services.charting_service - INFO - Received request: account_no='MUNDRAPORT' bank_id=None currency=None country=None timeframe='1Y'
+2024-06-26 10:06:10,268 - services.charting_service - INFO - Fetched 100 records for account_no 'MUNDRAPORT' with filters: bank_id=None, currency=None, country=None, timeframe=1Y
+2024-06-26 10:06:10,271 - controllers.default_controller - INFO - Returned 100 records in response for account_no 'MUNDRAPORT'
+2024-06-26 10:06:10,273 - __main__ - INFO - Successfully processed request at /charting-data/
+2024-06-26 10:06:10,288 - werkzeug - INFO - 172.18.0.4 - - [26/Jun/2024 10:06:10] "POST /charting-data/ HTTP/1.1" 200 -

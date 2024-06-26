@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  charting-data-service:
+    image: yashadakework/charting-data-service:1.0
+    ports:
+      - "9090:8000"
+    environment:
+      - DB_HOST=postgres
+      - DB_NAME=statement_processing
+      - DB_USER=postgres
+      - DB_PASSWORD=yash
+    depends_on:
+      - postgres
+    volumes:
+      - ./logs:/app/logs  # Mount the logs directory
+    networks:
+      - my_network
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=statement_processing
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=yash
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db_init:/docker-entrypoint-initdb.d/
+    networks:
+      - my_network
+
+  krakend:
+    image: yashadakework/charting-data-service-krakend:1.0
+    ports:
+      - "8080:8080"
+    depends_on:
+      - charting-data-service
+    networks:
+      - my_network
+
+volumes:
+  postgres_data:
+
+networks:
+  my_network:
