@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   charting-data-service:
-    image: yashadakework/charting-data-service:1.0
+    image: adminarthavedh/charting-data-service:1.0
     ports:
       - "9090:8000"
     environment:
@@ -30,7 +30,7 @@ services:
       - my_network
 
   krakend:
-    image: yashadakework/charting-data-service-krakend:1.0
+    image: adminarthavedh/charting-data-service-krakend:1.0
     ports:
       - "8080:8080"
     depends_on:
