@@ -1,0 +1,144 @@
+openapi: 3.0.3
+
+info:
+  title: "Statement Processing APIs"
+  version: "1.0.0"
+  
+servers:
+ - url: http://env-4565208.cloudjiffy.net:8080
+paths:
+
+  /api/charting-data:
+    post:
+      summary: Fetching charting data from database
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/payload'
+            example:
+              account_id: MUNDRAPORT
+              time_frame: 1M
+                
+      responses:
+        '200':
+          description: Successful response with data retrived from DB
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/succsessResponse'
+              example:
+                account_id: MUNDRAPORT
+                bank: SBI
+                currency: INR
+                candle_length: 1D
+                time_frame: 1M
+                record_count: 3
+                data: [{high: 140, low: 90, open: 100, close: 90},
+                        {high: 2000, low: 900, open: 500, close: 1500},
+                        {high: 7800, low: 3400, open: 5000, close: 5600}
+                      ]
+
+        '400':
+          description: Bad request error
+          content:
+            application/json:
+              schema:
+                $ref:
+                  '#/components/schemas/TechnicalError'
+              example:
+                error: 400
+                message: "bad request"
+        '401':
+          description: Unauthorized error
+          content:
+            application/json:
+              schema:
+                $ref:
+                  '#/components/schemas/TechnicalError'
+              example:
+                error: 401
+                message: "unauthorized user"
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref:
+                  '#/components/schemas/TechnicalError'
+              example:
+                error: 500
+                message: internal server error
+          
+          
+                
+              
+  
+  
+components:
+  schemas:
+    payload:
+      type: object
+      properties:
+        account_no:
+          type: string
+        bank:
+          type: string
+        currency:
+          type: string
+        country:
+          type: string
+        candle_length:
+          type: string
+        time_frame:
+          type: string
+          format: date-time
+      required:
+        - account_no
+        - time_frame
+        
+    succsessResponse:
+      type: object
+      properties:
+        account_no:
+          type: string
+        bank:
+          type: string
+        currency:
+          type: string
+        country:
+          type: string
+        candle_length:
+          type: string
+        time_frame:
+          type: string
+          format: date-time
+        record_count:
+          type: integer
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              timestamp:
+                type: integer       
+              high:
+                type: number
+              low:
+                type: number
+              open:
+                type: number
+              close:
+                type: number
+
+    TechnicalError:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+            
+        
+        
